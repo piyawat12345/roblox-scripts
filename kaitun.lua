@@ -49,6 +49,7 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	Events = {
+		Dino = true,
 		["Traveling Shop"] = {
 			"Liberty Lily",
 			"Firework Flower",
