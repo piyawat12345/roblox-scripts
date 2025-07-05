@@ -1,14 +1,3 @@
-repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
-
-task.spawn(function()
-    _G.ModeLog = "Grow"
-    _G.Api = "http://localhost:8899/"
-    loadstring(game:HttpGet("https://api.genhubs.com/v2/loadscript_log/?script_key=Vcfm0uDBvASKzIfoexHgsMXYLvdEi3Vz", true))()
-end)
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/piyawat12345/roblox-scripts/refs/heads/main/kaitun.lua"))()
-
 
 getgenv().Hermanos_Settings = {
 
