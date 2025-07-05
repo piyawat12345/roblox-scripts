@@ -1,10 +1,25 @@
+getgenv().Hermanos_Settings = {
+
+    ['key'] = _G.PCKEY,
+    ['PC'] = _G.PCNAME,
+
+
+    ['Seeds'] = {"Dragon Peper","Elephant Ears","Wild Carrot","Pear","Cantaloupe","Parasol Flower","Rosy Delight","Elephant Ears","Ember Lily","Honeysuckle","Lumira","Dandelion","Nectarshade","Manuka Flower","Lavender","Sunflower","Beanstalk","Candy Blossom","Grapes","Mango","Cactus","Cherry Blossom","Moon Blossom","Candy Blossom","Delphinium","Lily of the Valley","Aloe Vera","Guanabana","White Mulberry","Peace Lily","Pitcher Plant","Burning Bud","Rafflesia"},
+    ['Pets'] = {"Kiwi","Panda","Capybara","Ostrich","Bunny","Disco Bee","Queen Bee","Crab","Toucan","Deer","Red Giant Ant","Honey Bee","Monkey","Squirrel","Petal Bee","Starfish","Mole","Chicken","Echo Frog","Dragonfly","Raccoon","Seagull","Snail","Flamingo","Blood Kiwi","Owl","Spotted Deer","Golden Lab","Orangutan","Frog","Pack Bee","Cooked Owl","Red Dragon","Cow","Mimic Octopus","Praying Mantis","Caterpillar","Turtle","Dog","Bear Bee","Moth","Night Owl","Golden Bee","Peacock","Firefly","Giant Ant","Blood Hedgehog","Cat","Sea Turtle","Black Bunny","Brown Mouse","Butterfly","Silver Monkey","Tarantula Hawk","Wasp","Bee","Orange Tabby","Moon Cat","Blood Owl","Seal","Chicken Zombie","Red Fox","Grey Mouse","Hedgehog","Sea Otter","Scarlet Macaw","Polar Bear","Pig","Rooster","Meerkat","Axolotl","Hamster","Fennec Fox","Sand Snake"},
+    ['Gears'] = {"Recall Wrench","Harvest Tool","Advanced Sprinkler","Master Sprinkler","Trowel","Friendship Pot","Lightning Rod","Godly Sprinkler","Watering Can","Basic Sprinkler"},
+    ['Eggs'] = {"Rare Summer Egg","Paradise Egg","Epic Egg", "Divine Egg", "Rare Egg", "Uncommon Egg", "Legendary Egg", "Exotic Bug Egg", "Common Egg", "Bug Egg", "Night Egg", "Premium Night Egg", "Mythical Egg", "Bee Egg", "Premium Anti Bee Egg", "Anti Bee Egg"}
+
+}
+ 
+task.spawn(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/hermanos-dev/hermanos-script/main/gag-main.lua'))() end)
+    
 getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	["Low Cpu"] = true,
-	
+	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
 		["Limit"] = 300,
-		["Destroy Untill"] = 250,
+		["Destroy Untill"] = 200,
 		
 		["Safe Tree"] = {
 			"Moon Blossom","Candy Blossom"
@@ -34,6 +49,9 @@ getgenv().ConfigsKaitun = {
 			Lock = {
 				"Sunflower",
 				"Elephant Ears",
+				"Honeysuckle",
+				"Pink Lily",
+				"Purple Dahlia",
 				"Dragon Pepper",
 			}
 		}
@@ -46,12 +64,20 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	Events = {
+		["Traveling Shop"] = {
+			"Liberty Lily",
+			"Firework Flower",
+			--"Firework",
+			"Bald Eagle",
+			--"July 4th Crate",
+		},
 		["Summer Harvest"] = {
 			["Do At Money"] = 1000000,
 			["Point Limit"] = 14000,
 		},
 		Craft = {
 			"Crafters Seed Pack",
+			"Honeysuckle",
 			"Lightning Rod",
 			"Anti Bee Egg"
 		},
@@ -85,7 +111,8 @@ getgenv().ConfigsKaitun = {
 			"Night Egg",
 			"Bug Egg",
 			"Mythical Egg",
-			"Uncommon Egg"
+			"Uncommon Egg",
+			"Rare Summer Egg"
 		},
 		Buy = {
 			"Anti Bee Egg",
@@ -102,12 +129,13 @@ getgenv().ConfigsKaitun = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				"Blood Kiwi",
-				"Chicken"
+				"Rooster"
 			},
 			["Limit Upgrade"] = 2,
 			["Equip When Done"] = {
 				"Blood Kiwi",
-				"Chicken"
+				"Rooster",
+				"Seal",
 			},
 		},
 		Locked = {
@@ -120,9 +148,11 @@ getgenv().ConfigsKaitun = {
 			"Dragonfly",
 			"Raccoon",
 			"Red Fox",
+			"Hamster",
 			"Blood Kiwi",
-			["Chicken"] = 5,
-		}
+			["Rooster"] = 5,
+		},
+		LockPet_Weight = 10 -- if Weight >= 10 they will locked,
 	},
 
 	Webhook = {
