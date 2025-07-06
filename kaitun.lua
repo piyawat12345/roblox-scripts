@@ -62,10 +62,9 @@ getgenv().ConfigsKaitun = {
 			["Point Limit"] = 14000,
 		},
 		Craft = {
-			"Crafters Seed Pack",
-			"Honeysuckle",
+			"Ancient Seed Pack",
 			"Lightning Rod",
-			"Anti Bee Egg"
+			"Anti Bee Egg",
 		},
 		Shop = {
 			--"Traveler's Fruit",
