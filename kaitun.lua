@@ -38,6 +38,7 @@ getgenv().ConfigsKaitun = {
 				"Pink Lily",
 				"Purple Dahlia",
 				"Dragon Pepper",
+				"Bone Blossom"
 			}
 		}
 	},
@@ -63,8 +64,10 @@ getgenv().ConfigsKaitun = {
 		},
 		Craft = {
 			"Ancient Seed Pack",
+			"Crafters Seed Pack",
+			"Honeysuckle",
 			"Lightning Rod",
-			"Anti Bee Egg",
+			"Anti Bee Egg"
 		},
 		Shop = {
 			--"Traveler's Fruit",
@@ -90,6 +93,9 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Primal Egg",
+			"Dinosaur Egg",
+			"Bee Egg",
 			"Oasis Egg",
 			"Anti Bee Egg",
 			"Paradise Egg",
@@ -106,7 +112,8 @@ getgenv().ConfigsKaitun = {
 			"Night Egg",
 			"Bug Egg",
 			"Mythical Egg",
-			"Uncommon Egg"
+			"Uncommon Egg",
+			"Rare Summer Egg",
 		}
 	},
 	
@@ -170,6 +177,7 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 }
+
 License = "tRFJBPsMLCKZI0YZBFLUbMrBGOhjUWZz"
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
