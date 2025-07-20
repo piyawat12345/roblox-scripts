@@ -2,6 +2,7 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 	["Stack Plant"] = true,
 	
 	["Low Cpu"] = true,
+	["Auto Rejoin"] = true,
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
