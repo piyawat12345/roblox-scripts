@@ -1,13 +1,13 @@
-getgenv().ConfigsKaitun = { -- thx config cradit to npk02
+getgenv().ConfigsKaitun = {
 	["Stack Plant"] = true,
 	
 	["Low Cpu"] = true,
-	
+	["Auto Rejoin"] = true,
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
 		["Limit"] = 300,
-		["Destroy Untill"] = 200,
+		["Destroy Untill"] = 280,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -53,10 +53,6 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 			Lock = {
 				"Maple Apple",
 				"Sunflower",
-					
-				  
-				
-					
 				"Dragon Pepper",
 				"Elephant Ears",
 				"Moon Melon",
@@ -75,24 +71,13 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 	},
 
 	Events = {
-			  
 		["Traveling Shop"] = {
 			"Bee Egg",
-					 
-				
-				
-					  
-	
-						
-							 
-						   
 		},
 		Craft = {
 			"Ancient Seed Pack",
 			"Anti Bee Egg",
 			"Primal Egg",
-				   
-				 
 		},
 		Shop = {
 			"Zen Egg",
@@ -102,6 +87,8 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 			"Koi",
 		},
 		Restocks_limit = 5000000,
+		MinMoney_To_Restocks = 10000000,
+		MinMoney_To_PlayEvent = 30000000,
 		MinimumChi = 10
 	},
 
@@ -130,10 +117,8 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 			"Zen Egg",
 			"Primal Egg",
 			"Dinosaur Egg",
-			 
 			"Oasis Egg",
 			"Anti Bee Egg",
-				  
 			"Night Egg",
 			"Bug Egg",
 			"Paradise Egg",
@@ -141,11 +126,8 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 			"Rare Summer Egg",
 			"Mythical Egg",
 			"Common Egg",
-					
 		},
 		Buy = {
-				  
-				  
 			"Bee Egg",
 			"Oasis Egg",
 			"Paradise Egg",
@@ -154,7 +136,6 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 			"Rare Summer Egg",
 			"Bug Egg",
 			"Mythical Egg",
-				  
 			"Common Egg",
 		}
 	},
@@ -163,36 +144,33 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-
-			 
+				["Starfish"] = { 5, 100, 1 },
 			},
-			["Limit Upgrade"] = 4,
+			["Limit Upgrade"] = 2,
 			["Equip When Done"] = {
-				 
-			  
-				"Seal",
-				"Starfish",
-				"Koi",
-				"Tanuki",
-				"Tanchozuru",
-				"Kappa",
-				"Kitsune",
-				"Dilophosaurus",
-				"Moon Cat",
-				"Capybara",
-				"Spinosaurus",
-				"Bear Bee",
-				"T-Rex",
-				"Brontosaurus",
-				"Disco Bee",
-				"Butterfly",
-				"Queen Bee",
-				"Dragonfly",
-				"Raccoon",
-				"Fennec Fox",
-				"Mimic Octopus",
-				"Red Fox",
-				"Blood Owl",
+				["Seal"] = { 1, 70, 1 }, -- 1 mean equip only 1 pet , 70 mean equip only level pet lower than 70 the one on the last mean first priority will ues first if possible 
+				["Starfish"] = { 1, 70 },
+				["Koi"] = { 1, 70 },
+				["Tanuki"] = { 1, 70 },
+				["Tanchozuru"] = { 1, 70 },
+				["Kappa"] = { 1, 70 },
+				["Kitsune"] = { 1, 70 },
+				["Dilophosaurus"] = { 1, 70 },
+				["Moon Cat"] = { 1, 70 },
+				["Capybara"] = { 1, 70 },
+				["Spinosaurus"] = { 1, 70 },
+				["Bear Bee"] = { 1, 70 },
+				["T-Rex"] = { 1, 70 },
+				["Brontosaurus"] = { 1, 70 },
+				["Disco Bee"] = { 1, 70 },
+				["Butterfly"] = { 1, 70 },
+				["Queen Bee"] = { 1, 70 },
+				["Dragonfly"] = { 1, 70 },
+				["Raccoon"] = { 1, 70 },
+				["Fennec Fox"] = { 1, 70 },
+				["Mimic Octopus"] = { 1, 70 },
+				["Red Fox"] = { 1, 70 },
+				["Blood Owl"] = { 1, 70 },
 			},
 		},
 		Locked = {
@@ -210,20 +188,16 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 			"Brontosaurus",
 			"Disco Bee",
 			"Butterfly",
-				   
-					
-				
 			"Queen Bee",
 			"Dragonfly",
 			"Raccoon",
 			"Fennec Fox",
 			"Mimic Octopus",
 			"Red Fox",
-			 
 			"Blood Owl",
 			["Starfish"] = 10,
 		},
-		LockPet_Weight = 10, -- if Weight >= 10 they will locked,
+		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
 			"Shiba Inu",
 		}
@@ -247,10 +221,6 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 				"Disco Bee",
 				"Butterfly",
 				"Mimic Octopus",
-			  
-					
-		   
-				  
 				"Queen Bee",
 				"Dragonfly",
 				"Raccoon",
@@ -260,7 +230,6 @@ getgenv().ConfigsKaitun = { -- thx config cradit to npk02
 		}
 	},
 }
-
 License = "tRFJBPsMLCKZI0YZBFLUbMrBGOhjUWZz"
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
