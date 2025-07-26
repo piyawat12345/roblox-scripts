@@ -1,5 +1,5 @@
 getgenv().ConfigsKaitun = {
-	["Stack Plant"] = true,
+	["Block Pet Gift"] = true,
 	
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = true,
@@ -71,6 +71,18 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Events = {
+		["Zen Event"] = {
+			["Restocking"] = { -- Minimumthing to restock
+				Max_Restocks_Price = 50_000_000,
+				Minimum_Money = 10_000_000,
+				Minimum_Chi = 200
+			},
+			["Doing"] = {
+				Minimum_Money = 30_000_000, -- minimum money to start play this event
+				First_Upgrade_Tree = 4,
+				Maximum_Chi = 250,
+			}
+		},
 		["Traveling Shop"] = {
 			"Bee Egg",
 		},
@@ -86,10 +98,6 @@ getgenv().ConfigsKaitun = {
 			"Pet Shard Tranquil",
 			"Koi",
 		},
-		Restocks_limit = 5000000,
-		MinMoney_To_Restocks = 10000000,
-		MinMoney_To_PlayEvent = 30000000,
-		MinimumChi = 10
 	},
 
 	Gear = {
@@ -173,6 +181,7 @@ getgenv().ConfigsKaitun = {
 				["Blood Owl"] = { 1, 70 },
 			},
 		},
+		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Koi",
 			"Tanuki",
@@ -230,6 +239,7 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 }
+
 License = "tRFJBPsMLCKZI0YZBFLUbMrBGOhjUWZz"
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
