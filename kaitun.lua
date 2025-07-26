@@ -227,13 +227,13 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
-				"Disco Bee",
-				"Butterfly",
-				"Mimic Octopus",
-				"Queen Bee",
-				"Dragonfly",
-				"Raccoon",
-				"Fennec Fox",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
 			},
 			Pet_Weight_Noti = true,
 		}
