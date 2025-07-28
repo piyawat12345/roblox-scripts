@@ -1,9 +1,9 @@
 getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
-	
+
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = true,
-	
+
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
 		["Limit"] = 300,
@@ -12,6 +12,14 @@ getgenv().ConfigsKaitun = {
 		["Safe Tree"] = {
 			"Moon Blossom",
 			"Fossilight",
+
+			-- locked fruit for zen event
+			["Tomato"] = 1, ["Strawberry"] = 1, ["Blueberry"] = 1,
+			["Orange Tulip"] = 1, ["Corn"] = 1, ["Daffodil"] = 1,
+			["Bamboo"] = 1, ["Apple"] = 1, ["Coconut"] = 1,
+			["Pumpkin"] = 1, ["Watermelon"] = 1, ["Cactus"] = 1,
+			["Dragon Fruit"] = 1, ["Mango"] = 1, ["Grape"] = 1,
+			["Mushroom"] = 1, ["Pepper"] = 1, ["Cacao"] = 1
 		}
 	},
 
@@ -96,8 +104,13 @@ getgenv().ConfigsKaitun = {
 			"Zen Seed Pack",
 			"Spiked Mango",
 			"Pet Shard Tranquil",
+			"Pet Shard Corrupted",
 			"Koi",
+			"Soft Sunshine",
+			"Sakura Bush",
+			"Raiju",
 		},
+		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
 
 	Gear = {
@@ -183,6 +196,8 @@ getgenv().ConfigsKaitun = {
 		},
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
+			"Corrupted Kitsune",
+			"Raiju",
 			"Koi",
 			"Tanuki",
 			"Tanchozuru",
@@ -209,33 +224,6 @@ getgenv().ConfigsKaitun = {
 		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
 			"Shiba Inu",
-		}
-	},
-
-	Webhook = {
-		UrlPet = "xxx",
-		UrlSeed = "xxx",
-		PcName = "xxx",
-
-		Noti = {
-			Seeds = {
-				"Sunflower",
-				"Dragon Pepper",
-				"Elephant Ears",
-			},
-			SeedPack = {
-				"Idk"
-			},
-			Pets = {
-				"Disco Bee",
-				"Butterfly",
-				"Mimic Octopus",
-				"Queen Bee",
-				"Dragonfly",
-				"Raccoon",
-				"Fennec Fox",
-			},
-			Pet_Weight_Noti = true,
 		}
 	},
 }
