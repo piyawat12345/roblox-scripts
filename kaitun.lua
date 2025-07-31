@@ -89,6 +89,11 @@ getgenv().ConfigsKaitun = {
 				Minimum_Money = 30_000_000, -- minimum money to start play this event
 				First_Upgrade_Tree = 4,
 				Maximum_Chi = 250,
+
+				-- // thing to skip doing
+				Skip_Fox = false, -- Skip The Middle Fox Trade (Corrupted Kitsune)
+				Skip_Corrupted_OldMan = false, -- Skip The Middle Fox Trade (Corrupted Kitsune)
+				-- If u need to skip Tranquill OldMan Set "First Upgrade Tree" To 0 and Max Chi To 99999
 			}
 		},
 		["Traveling Shop"] = {
@@ -224,6 +229,33 @@ getgenv().ConfigsKaitun = {
 		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
 		Instant_Sell = {		
 			"Shiba Inu",
+		}
+	},
+
+	Webhook = {
+		UrlPet = "xxx",
+		UrlSeed = "xxx",
+		PcName = "xxx",
+
+		Noti = {
+			Seeds = {
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+			},
+			SeedPack = {
+				"Idk"
+			},
+			Pets = {
+				"Disco Bee",
+				"Butterfly",
+				"Mimic Octopus",
+				"Queen Bee",
+				"Dragonfly",
+				"Raccoon",
+				"Fennec Fox",
+			},
+			Pet_Weight_Noti = true,
 		}
 	},
 }
