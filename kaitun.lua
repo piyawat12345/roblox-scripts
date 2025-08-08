@@ -1,4 +1,6 @@
 getgenv().ConfigsKaitun = {
+	Beta_Fix_Data_Sync = true,
+
 	["Block Pet Gift"] = true,
 
 	Collect_Cooldown = 60, -- cooldown to collect fruit
@@ -53,23 +55,6 @@ getgenv().ConfigsKaitun = {
 	Events = {
 		["Cook Event"] = {
 			Minimum_Money = 30_000_000, -- minimum money to start play this event
-		},
-		["Zen Event"] = {
-			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 50_000_000,
-				Minimum_Money = 10_000_000,
-				Minimum_Chi = 200
-			},
-			["Doing"] = {
-				Minimum_Money = 30_000_000, -- minimum money to start play this event
-				First_Upgrade_Tree = 4,
-				Maximum_Chi = 250,
-
-				-- // thing to skip doing
-				Skip_Fox = false, -- Skip The Middle Fox Trade (Corrupted Kitsune)
-				Skip_Corrupted_OldMan = false, -- Skip The OldMan Trade (Kodama)
-				-- If u need to skip Tranquill OldMan Set "First Upgrade Tree" To 0 and Max Chi To 99999
-			}
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -148,7 +133,7 @@ getgenv().ConfigsKaitun = {
 			["Pet"] = {
 				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
-			["Limit Upgrade"] = 2,
+			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
 				["Tanchozuru"] = { 5, 100, 1 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible 
 				["Ostrich"] = { 3, 100, 2 },
