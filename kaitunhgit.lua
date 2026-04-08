@@ -28,20 +28,19 @@ task.spawn(function()
 end)
 
 task.spawn(function()
-script_key = user_key
+script_key= user_key
 getgenv().Config = {
     Build = {
         Main = "Luck", -- Base on: "Damage", "Luck"
-        LockRace = "Kitsune", -- Lock to specific race
+        LockRace = "Luckborn", -- Lock to specific race
     },
 
     Auto_Passive = {
         Enable = true, -- Enable/Disable passive reroll
         Target_Passive = "Fortune Chosen", -- Target Passive On Weapon
         MainTool = {     -- Tools to use for activating passives
-            "Moon Slayer",
-            "Strongest Shinobi",
             "Strongest In History", 
+            "Ice Queen",
         },
     },
 
@@ -83,6 +82,7 @@ getgenv().Config = {
         ["YamatoBoss"] = false,
         ["StrongestShinobiBoss"] = false,
         ["MoonSlayerBoss"] = false,
+        ["IceQueenBoss"] = false,
     },
 
     Keep_Summon_Boss = {  -- Keep Summon Bosses since you got all items
@@ -95,6 +95,7 @@ getgenv().Config = {
         ["BlessedMaidenBoss"] = false,
         ["SaberAlterBoss"] = false,
         ["MoonSlayerBoss"] = false,
+        ["IceQueenBoss"] = false,
         ["AnosBoss"] = false,
         ["AtomicBoss"] = false,
     },
@@ -131,12 +132,12 @@ getgenv().Config = {
     
     End_Farm_Rank = { -- If reached this rank all boss farm is stopped
         Enable = false,
-        ["Rank"] = "Ascend VIII",
+        ["Rank"] = {"Ascend IX"},
             BossRush = {
                 Enable = false,
                 Build = "Damage",
                 MainTool = "Abyssal Empress",
-                WhiteList_Abilities = {4,5}, --
+                WhiteList_Abilities = {3,2},
                 AutoReplay = false,
                 Difficulty = "Easy",
             },
@@ -144,11 +145,19 @@ getgenv().Config = {
                 Enable = false,
                 Build = "Damage",
                 MainTool = "Abyssal Empress",
-                WhiteList_Abilities = {4,5},
+                WhiteList_Abilities = {3,2},
                 AutoReplay = false,
             },
     },
-
+    Advanced_Item_Config = {
+        ["Use Common Chest"] = true, -- Auto Use Common Chest
+        ["Use Rare Chest"] = true, -- Auto Use Rare Chest
+        ["Use Epic Chest"] = true, -- Auto Use Epic Chest
+        ["Use Legendary Chest"] = true, -- Auto Use Legendary Chest
+        ["Use Cosmetic Crate (Untradeable)"] = true, -- Auto Use Cosmetic Crate (Untradeable)
+        ["Use Aura Crate (Untradeable)"] = true, -- Auto Use Aura Crate (Untradeable)
+        ["Use Secret Chest (Untradeable)"] = true, -- Auto Use Secret Chest (Untradeable)
+    },
     Log = {
         Horst = false, -- Log Horst
         RAM = true, -- Log RAM
@@ -170,6 +179,7 @@ getgenv().Config = {
                 ["Ichigo"] = true,
                 ["Aizen"] = true,
                 ["Shadow"] = true,
+                ["Escanor"] = true,
                 ["Rimuru"] = true,
                 ["Strongest In History"] = true,
                 ["Blessed Maiden"] = true,
@@ -177,6 +187,7 @@ getgenv().Config = {
                 ["Strongest Shinobi"] = true,
                 ["Abyssal Empress"] = true,
                 ["Moon Slayer"] = true,
+                ["Ice Queen"] = true,
                 ["Atomic"] = true,
                 ["True Aizen"] = true,
             },
