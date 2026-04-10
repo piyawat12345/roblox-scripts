@@ -35,15 +35,14 @@ getgenv().Config = {
     Build = {
         ["Main"] = "Luck", -- Base on: "Damage", "Luck"
         ["LockRace"] = "Luckborn", -- Lock to specific race
-        ["Accessory"] = "Moon Outfit", -- Accessory to use, set to "None" to ignore accessory
+        ["Accessory"] = "Auto", -- Accessory to use, set to "None" to ignore accessory
     },
     Auto_Passive = {
-        ["Enable"] = false, -- Need to enable this to use below features
+        ["Enable"] = true, -- Need to enable this to use below features
         ["Target_Passive"] = "Fortune Chosen", -- Target Passive On Weapon
         ["MainTool"] = {     -- Tools to use for activating passives
             "Strongest In History", 
-            "Blessed Maiden", 
-            "Saber Alter",
+            "Ice Queen", 
         },
     },
     Auto_Reroll_Stats = { -- Stats to reroll to SSS - Z
@@ -52,13 +51,13 @@ getgenv().Config = {
         ["CritDamage"] = true,
         ["CritChance"] = true,
         ["Defense"] = false,
-        ["CooldownReduction"] = false,
-        ["DamageReduction"] = false,
+        ["CooldownReduction"] = true,
+        ["DamageReduction"] = true,
     },
-    Specific_Trait = {"Emperor", "Celestial"}, -- Find Target Trait
+    Specific_Trait = {"Emperor"}, -- Find Target Trait
     Specific_Clan = {"Eminence"}, -- Left {} if you want any legendary clan
     Specific_Power = {"Colossus"}, -- Find Target Power
-    Blacklist_Rank = {"Ascend IX"}, -- Stop farming rank when reached this rank
+    Blacklist_Rank = {"Ascend VIII", "Ascend IX", "Ascend X"}, -- Stop farming rank when reached this rank
 
     --============= WEAPON AND ACCESSORY CONFIG =============--
     AutoBless_Weapons = {
@@ -72,7 +71,7 @@ getgenv().Config = {
         ["Enable"] = true, -- Need to enable this to use below features
         ["Accessory"] = {
             "Moon Outfit",
-            "Imperial Outfit",
+            "Ice Queen Outfit",
         }
     },
 
@@ -85,9 +84,9 @@ getgenv().Config = {
 
     --============= ADVANCED WORLD BOSS CONFIG =============--
     WorldBoss_Configuration = {
-        ["Enable"] = false, -- Need to enable this to use below features
-        ["MainTool"] = "Rimuru", -- Tool to use for farming world boss
-        ["WhiteList_Abilities"] = {1}, -- Only use these abilities
+        ["Enable"] = true, -- Need to enable this to use below features
+        ["MainTool"] = "Auto", -- Tool to use for farming world boss
+        ["WhiteList_Abilities"] = {3,2}, -- Only use these abilities
     },
     Blacklist_Bosses = { -- WARNING DISABLE SOME BOSS YOU WON'T GET ITEM FOR WEAPON/RANK ASCEND
         ["SaberBoss"] = false,
@@ -147,7 +146,7 @@ getgenv().Config = {
             ["Build"] = "Damage",
             ["MainTool"] = "Abyssal Empress",
             ["WhiteList_Abilities"] = {3,2},
-            ["Limit_Floor"] = 100,
+            ["Limit_Floor"] = 0,
             ["AutoReplay"] = false,
         },
     },
@@ -173,7 +172,7 @@ getgenv().Config = {
             ["HP"] = false,
         }
     },
-    Max_Rune_Level = false, -- Auto Upgrade Rune to max level
+    Max_Rune_Level = true, -- Auto Upgrade Rune to max level
 
     --============= ITEM USING CONFIG =============--
     Advanced_Item_Config = {
@@ -188,37 +187,37 @@ getgenv().Config = {
 
     Log = {
         Horst = false, -- Log Horst
-        RAM = false, -- Log RAM
+        RAM = true, -- Log RAM
         Custom = {
-            ["MainWeapon"] = false,
-            ["Rank"] = false,
-            ["Race"] = false,
-            ["Rune"] = false,
-            ["Clan"] = false,
-            ["Trait"] = false,
-            ["Power"] = false,
-            ["DamagePercent"] = false,
-            ["LuckPercent"] = false,
-            ["Haki"] = false,
-            ["Level"] = false,
-            ["Currencies"] = false,
+            ["MainWeapon"] = true,
+            ["Rank"] = true,
+            ["Race"] = true,
+            ["Rune"] = true,
+            ["Clan"] = true,
+            ["Trait"] = true,
+            ["Power"] = true,
+            ["DamagePercent"] = true,
+            ["LuckPercent"] = true,
+            ["Haki"] = true,
+            ["Level"] = true,
+            ["Currencies"] = true,
             ["Weapon"] = {
                 ["Dark Blade"] = false,
                 ["Gryphon"] = false,
-                ["Ichigo"] = false,
-                ["Aizen"] = false,
-                ["Shadow"] = false,
-                ["Escanor"] = false,
-                ["Rimuru"] = false,
-                ["Strongest In History"] = false,
-                ["Blessed Maiden"] = false,
-                ["Saber Alter"] = false,
-                ["Strongest Shinobi"] = false,
-                ["Abyssal Empress"] = false,
-                ["Moon Slayer"] = false,
-                ["Ice Queen"] = false,
-                ["Atomic"] = false,
-                ["True Aizen"] = false,
+                ["Ichigo"] = true,
+                ["Aizen"] = true,
+                ["Shadow"] = true,
+                ["Escanor"] = true,
+                ["Rimuru"] = true,
+                ["Strongest In History"] = true,
+                ["Blessed Maiden"] = true,
+                ["Saber Alter"] = true,
+                ["Strongest Shinobi"] = true,
+                ["Abyssal Empress"] = true,
+                ["Moon Slayer"] = true,
+                ["Ice Queen"] = true,
+                ["Atomic"] = true,
+                ["True Aizen"] = true,
             },
             Items = {
                 "Race Reroll",
@@ -233,6 +232,7 @@ getgenv().Config = {
     }
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/5e53e03e462e69f749e2c1d56473860a.lua"))()
+end)
 
 getgenv().Settings = {
     WebServer_Url = "http://localhost:8899",
