@@ -30,34 +30,65 @@ end)
 task.spawn(function()
 script_key= user_key
 getgenv().Config = {
-    Build = {
-        Main = "Luck", -- Base on: "Damage", "Luck"
-        LockRace = "Luckborn", -- Lock to specific race
-    },
 
+    --=============== BUILD CONFIG ==============--
+    Build = {
+        ["Main"] = "Luck", -- Base on: "Damage", "Luck"
+        ["LockRace"] = "Luckborn", -- Lock to specific race
+        ["Accessory"] = "Moon Outfit", -- Accessory to use, set to "None" to ignore accessory
+    },
     Auto_Passive = {
-        Enable = true, -- Enable/Disable passive reroll
-        Target_Passive = "Fortune Chosen", -- Target Passive On Weapon
-        MainTool = {     -- Tools to use for activating passives
+        ["Enable"] = false, -- Need to enable this to use below features
+        ["Target_Passive"] = "Fortune Chosen", -- Target Passive On Weapon
+        ["MainTool"] = {     -- Tools to use for activating passives
             "Strongest In History", 
-            "Ice Queen",
+            "Blessed Maiden", 
+            "Saber Alter",
         },
     },
-
     Auto_Reroll_Stats = { -- Stats to reroll to SSS - Z
         ["Damage"] = true,
         ["Luck"] = true,
         ["CritDamage"] = true,
         ["CritChance"] = true,
         ["Defense"] = false,
-        ["CooldownReduction"] = true,
-        ["DamageReduction"] = true,
+        ["CooldownReduction"] = false,
+        ["DamageReduction"] = false,
     },
-
     Specific_Trait = {"Emperor", "Celestial"}, -- Find Target Trait
     Specific_Clan = {"Eminence"}, -- Left {} if you want any legendary clan
     Specific_Power = {"Colossus"}, -- Find Target Power
+    Blacklist_Rank = {"Ascend IX"}, -- Stop farming rank when reached this rank
 
+    --============= WEAPON AND ACCESSORY CONFIG =============--
+    AutoBless_Weapons = {
+        ["Enable"] = true, -- Need to enable this to use below features
+        ["Weapon"] = {
+            "Strongest In History",
+            "Ice Queen",
+        }
+    },
+    AutoEnchant_Accessory = {
+        ["Enable"] = true, -- Need to enable this to use below features
+        ["Accessory"] = {
+            "Moon Outfit",
+            "Imperial Outfit",
+        }
+    },
+
+    --============= MULTI-ISLAND FARM CONFIG =============--
+    Multi_Island_Farm = {   -- when no boss teleport to multiple island to farm
+        ["Enable"] = true, -- Need to enable this to use below features
+        ["MainTool"] = "Strongest In History", -- Tool to use for farming mobs on other islands
+        ["WhiteList_Abilities"] = {2}, -- Only use these abilities
+    },
+
+    --============= ADVANCED WORLD BOSS CONFIG =============--
+    WorldBoss_Configuration = {
+        ["Enable"] = false, -- Need to enable this to use below features
+        ["MainTool"] = "Rimuru", -- Tool to use for farming world boss
+        ["WhiteList_Abilities"] = {1}, -- Only use these abilities
+    },
     Blacklist_Bosses = { -- WARNING DISABLE SOME BOSS YOU WON'T GET ITEM FOR WEAPON/RANK ASCEND
         ["SaberBoss"] = false,
         ["GojoBoss"] = false,
@@ -84,7 +115,6 @@ getgenv().Config = {
         ["MoonSlayerBoss"] = false,
         ["IceQueenBoss"] = false,
     },
-
     Keep_Summon_Boss = {  -- Keep Summon Bosses since you got all items
         ["SaberBoss"] = false,
         ["IchigoBoss"] = false,
@@ -100,16 +130,31 @@ getgenv().Config = {
         ["AtomicBoss"] = false,
     },
 
-    Multi_Island_Farm = {   -- IDK when no boss teleport to multiple island to farm
-        Enable = true, -- Enable Multi_Island_Farm
-        MainTool = "Strongest In History", -- Tool to use for farming mobs on other islands
-        WhiteList_Abilities = {2}, -- Only use these abilities
+    --============= DUNGEON CONFIG =============--    
+    Dungeon_Configuration = { -- If reached this rank do BossRush/Tower until out of keys
+        ["Enable"] = false, -- Need to enable this to use below features
+        ["Rank"] = {"Ascend IX"}, -- IF RANK MATCHED, DO BOSS RUSH/TOWER
+        ["BossRush"] = {
+            ["Enable"] = false,
+            ["Build"] = "Damage",
+            ["MainTool"] = "Abyssal Empress",
+            ["WhiteList_Abilities"] = {3,2},
+            ["AutoReplay"] = false,
+            ["Difficulty"] = "Easy",
+        },
+        ["Tower"] = {
+            ["Enable"] = false,
+            ["Build"] = "Damage",
+            ["MainTool"] = "Abyssal Empress",
+            ["WhiteList_Abilities"] = {3,2},
+            ["Limit_Floor"] = 100,
+            ["AutoReplay"] = false,
+        },
     },
 
-    Blacklist_Rank = "Ascend IX", -- Stop farming rank when reached this rank
-
+    --============= AUTO UPGRADE CONFIG =============--
     Auto_Upgrade_BossRush = { -- Upgrade boss rush stats when maxed its stop
-        ["Enable"] = false,
+        ["Enable"] = false, -- Need to enable this to use below features
         ["Stats"] = {
             ["Luck"] = true,
             ["Damage"] = true,
@@ -118,9 +163,8 @@ getgenv().Config = {
             ["HP"] = false,
         }
     },
-
     Auto_Upgrade_Tower = { -- Upgrade tower stats when maxed its stop
-        ["Enable"] = false,
+        ["Enable"] = false, -- Need to enable this to use below features
         ["Stats"] = {
             ["Luck"] = true,
             ["Damage"] = true,
@@ -129,26 +173,9 @@ getgenv().Config = {
             ["HP"] = false,
         }
     },
-    
-    End_Farm_Rank = { -- If reached this rank all boss farm is stopped
-        Enable = false,
-        ["Rank"] = {"Ascend IX"},
-            BossRush = {
-                Enable = false,
-                Build = "Damage",
-                MainTool = "Abyssal Empress",
-                WhiteList_Abilities = {3,2},
-                AutoReplay = false,
-                Difficulty = "Easy",
-            },
-            Tower = {
-                Enable = false,
-                Build = "Damage",
-                MainTool = "Abyssal Empress",
-                WhiteList_Abilities = {3,2},
-                AutoReplay = false,
-            },
-    },
+    Max_Rune_Level = false, -- Auto Upgrade Rune to max level
+
+    --============= ITEM USING CONFIG =============--
     Advanced_Item_Config = {
         ["Use Common Chest"] = true, -- Auto Use Common Chest
         ["Use Rare Chest"] = true, -- Auto Use Rare Chest
@@ -158,38 +185,40 @@ getgenv().Config = {
         ["Use Aura Crate (Untradeable)"] = true, -- Auto Use Aura Crate (Untradeable)
         ["Use Secret Chest (Untradeable)"] = true, -- Auto Use Secret Chest (Untradeable)
     },
+
     Log = {
         Horst = false, -- Log Horst
-        RAM = true, -- Log RAM
+        RAM = false, -- Log RAM
         Custom = {
-            MainWeapon = true,
-            Rank = true,
-            Race = true,
-            Rune = true,
-            Clan = true,
-            Power = true,
-            DamagePercent = true,
-            LuckPercent = true,
-            Haki = true,
-            Level = true,
-            Currencies = true,
-            Weapon = {
+            ["MainWeapon"] = false,
+            ["Rank"] = false,
+            ["Race"] = false,
+            ["Rune"] = false,
+            ["Clan"] = false,
+            ["Trait"] = false,
+            ["Power"] = false,
+            ["DamagePercent"] = false,
+            ["LuckPercent"] = false,
+            ["Haki"] = false,
+            ["Level"] = false,
+            ["Currencies"] = false,
+            ["Weapon"] = {
                 ["Dark Blade"] = false,
                 ["Gryphon"] = false,
-                ["Ichigo"] = true,
-                ["Aizen"] = true,
-                ["Shadow"] = true,
-                ["Escanor"] = true,
-                ["Rimuru"] = true,
-                ["Strongest In History"] = true,
-                ["Blessed Maiden"] = true,
-                ["Saber Alter"] = true,
-                ["Strongest Shinobi"] = true,
-                ["Abyssal Empress"] = true,
-                ["Moon Slayer"] = true,
-                ["Ice Queen"] = true,
-                ["Atomic"] = true,
-                ["True Aizen"] = true,
+                ["Ichigo"] = false,
+                ["Aizen"] = false,
+                ["Shadow"] = false,
+                ["Escanor"] = false,
+                ["Rimuru"] = false,
+                ["Strongest In History"] = false,
+                ["Blessed Maiden"] = false,
+                ["Saber Alter"] = false,
+                ["Strongest Shinobi"] = false,
+                ["Abyssal Empress"] = false,
+                ["Moon Slayer"] = false,
+                ["Ice Queen"] = false,
+                ["Atomic"] = false,
+                ["True Aizen"] = false,
             },
             Items = {
                 "Race Reroll",
@@ -200,11 +229,10 @@ getgenv().Config = {
     },
     Require_Private_Server = {
         Kick = true, -- Auto Kick Player if not in Private Server
-        LeaveServer = false, -- Auto Leave Server and return to home page if not in Private Server
+        LeaveServer = true, -- Auto Leave Server and return to home page if not in Private Server
     }
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/5e53e03e462e69f749e2c1d56473860a.lua"))()
-end)
 
 getgenv().Settings = {
     WebServer_Url = "http://localhost:8899",
